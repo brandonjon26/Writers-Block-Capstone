@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { WritersBlock } from './components/WritersBlock';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <WritersBlock />
   </React.StrictMode>,
   document.getElementById('root')
 );

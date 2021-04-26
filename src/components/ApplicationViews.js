@@ -4,15 +4,15 @@ import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 
 
-export const ApplicationViews = () => {
+export const ApplicationViews = ({setAuthUser}) => {
     return (
         <>
             <Route exact path="/Login">
-                <Login />
+                <Login setAuthUser={setAuthUser} />
             </Route>
 
             <Route exact path="/Register">
-                <Register />
+                <Register setAuthUser={setAuthUser} />
             </Route>
         </>
     )

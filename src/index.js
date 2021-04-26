@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { WritersBlock } from './components/WritersBlock';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from "react-router-dom";
+import { WritersBlock } from './components/WritersBlock';
 
 ReactDOM.render(
   <React.StrictMode>
-    <WritersBlock />
+    <Router>
+      <WritersBlock />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

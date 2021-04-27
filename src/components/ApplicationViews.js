@@ -2,10 +2,11 @@ import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
-import { ProjectList } from "./projects/ProjectsList"
+import { ProjectList } from "./projects/ProjectsList";
+import { ProjectForm } from "./projects/NewProjectForm";
 
 
-export const ApplicationViews = ({setAuthUser}) => {
+export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
     return (
         <>
             <Route exact path="/Login">
@@ -17,7 +18,11 @@ export const ApplicationViews = ({setAuthUser}) => {
             </Route>
 
             <Route exact path="/">
-                <ProjectList />
+                {isAuthenticated ? <ProjectList /> : <Redirect to="/login" />}
+            </Route>
+
+            <Route exact path="/projects/create">
+                <ProjectForm />
             </Route>
         </>
     )

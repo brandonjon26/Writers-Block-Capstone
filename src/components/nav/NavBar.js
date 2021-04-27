@@ -12,25 +12,28 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
     }
 
     return (
-        <ul className="Navbar">
+        <>
             {isAuthenticated
-                ? <li className="navbar__item">
-                    <Link className="navbar__link" to="/"> My Projects </Link>
-                </li>
+                ?
+                <ul className="Navbar">
+                    {isAuthenticated
+                        ? <li className="navbar__item">
+                            <Link className="navbar__link" to="/"> My Projects </Link>
+                        </li>
+                        : null}
+                    {isAuthenticated
+                        ? <li className="navbar__item">
+                            <Link className="navbar__link" to="/bursts"> Bursts </Link>
+                        </li>
+                        : null}
+                    {isAuthenticated
+                        ? <li className="navbar__item">
+                            <Link className="navbar__link" to="/login" onClick={handleLogout}> Logout </Link>
+                        </li>
+                        : null}
+                </ul>
                 : null}
-            {isAuthenticated
-                ? <li className="navbar__item">
-                    <Link className="navbar__link" to="/bursts"> Bursts </Link>
-                </li>
-                : null}
-            {isAuthenticated
-                ? <li className="navbar__item">
-                    <Link className="navbar__link" to="/login" onClick={handleLogout}> Logout </Link>
-                </li>
-                : <li className="navbar__item">
-                    <Link className="navbar__link" to="/login">Login</Link>
-                </li>}
-        </ul>
+        </>
     )
 }
 

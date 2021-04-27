@@ -9,9 +9,10 @@ export const ProjectCard = ({ project, handleDeleteProject }) => {
                 <div className="projects">
                     <div className="project">
                         <h2> <span className="card-projecttitle">
-                            {project.name}
+                            {project.title}
                         </span></h2>
                         <h3>Genre: {project.genre}</h3>
+                        <p>Summary: {project.summary}</p>
                         <Link to={`/projects/${project.id}`}>
                             <button type="button">Open Project</button>
                         </Link>

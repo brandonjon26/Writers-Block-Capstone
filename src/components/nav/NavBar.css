@@ -3,6 +3,7 @@
     flex-wrap: nowrap;
     justify-content: left;
     background-color: skyblue;
+    height: 30px;
 }
 
 .navbar__item {

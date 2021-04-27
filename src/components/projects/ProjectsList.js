@@ -18,7 +18,7 @@ export const ProjectList = () => {
 
     const handleDeleteProject = id => {
         deleteProject(id)
-            .then(() => getAllProjects().thrn(setProjects));
+            .then(() => getAllProjects().then(setProjects));
     };
 
     useEffect(() => {

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { withRouter } from 'react-router-dom';
 import { Link, useHistory } from "react-router-dom";
+import "./NavBar.css";
 
 export const NavBar = ({ clearUser, isAuthenticated }) => {
     const history = useHistory()
@@ -24,7 +25,7 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
                 : null}
             {isAuthenticated
                 ? <li className="navbar__item">
-                    <span className="navbar__link" onClick={handleLogout}> Logout </span>
+                    <Link className="navbar__link" onClick={handleLogout}> Logout </Link>
                 </li>
                 : <li className="navbar__item">
                     <Link className="navbar__link" to="/login">Login</Link>

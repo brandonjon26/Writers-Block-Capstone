@@ -25,7 +25,7 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
                 : null}
             {isAuthenticated
                 ? <li className="navbar__item">
-                    <Link className="navbar__link" onClick={handleLogout}> Logout </Link>
+                    <Link className="navbar__link" to="/login" onClick={handleLogout}> Logout </Link>
                 </li>
                 : <li className="navbar__item">
                     <Link className="navbar__link" to="/login">Login</Link>

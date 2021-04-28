@@ -11,7 +11,7 @@ export const ProjectCard = ({ project, handleDeleteProject }) => {
                         <h2> <span className="card-projecttitle">
                             {project.title}
                         </span></h2>
-                        <h3>Genre: {project.genre}</h3>
+                        <h3>Genre: {project.genre.name}</h3>
                         <p>Summary: {project.summary}</p>
                         <Link to={`/projects/${project.id}`}>
                             <button type="button">Open Project</button>

@@ -3,14 +3,14 @@ import { GoalCard } from "./GoalCard";
 import { getAllGoals, getGoalById, deleteGoal } from "../../../../modules/GoalManager";
 import { useHistory } from "react-router";
 
-export const GoalList = () => {
+export const GoalList = ({ projectId }) => {
 
     const [goals, setGoals] = useState([]);
 
     let history = useHistory();
 
-    const getGoals = () => {
-        return getAllGoals()
+    const getGoalsByProjectId = (projectId) => {
+        return getAllGoals(projectId)
             .then(goalsFromAPI => {
                 setGoals(goalsFromAPI)
             });
@@ -18,16 +18,16 @@ export const GoalList = () => {
 
     const handleDeleteGoal = id => {
         deleteGoal(id)
-            .then(() => getAllGoals().then(setGoals));
+            .then(() => getAllGoals(projectId).then(setGoals));
     };
 
     useEffect(() => {
-        getGoals();
+        getGoalsByProjectId(projectId);
     }, []);
 
     return (
         <>
-            <div className="container-cards">
+            <div id="goals" className="container-cards">
                 <section className="section-content">
                     <button type="button"
                         className="btn"

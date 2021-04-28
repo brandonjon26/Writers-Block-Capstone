@@ -8,7 +8,7 @@ export const ProjectForm = () => {
 
     const [project, setProject] = useState({
         title: "",
-        genre: 0,
+        genreId: 0,
         summary: ""
     });
 
@@ -65,7 +65,7 @@ export const ProjectForm = () => {
                         <option value="0">Select a Genre </option>
                         {genre.map(g => (
                             <option key={g.id} value={g.id}>
-                                {g.genre}
+                                {g.name}
                             </option>
                         ))}
                     </select>

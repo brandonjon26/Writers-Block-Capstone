@@ -4,6 +4,7 @@ import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 import { ProjectList } from "./projects/ProjectsList";
 import { ProjectForm } from "./projects/NewProjectForm";
+import { ProjectDetail } from "./projects/ProjectDetail";
 
 
 export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
@@ -23,6 +24,10 @@ export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
 
             <Route exact path="/projects/create">
                 <ProjectForm />
+            </Route>
+
+            <Route exact path="/projects/:projectId(\d+)">
+                <ProjectDetail />
             </Route>
         </>
     )

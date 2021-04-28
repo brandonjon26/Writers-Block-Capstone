@@ -1,6 +1,6 @@
 import React, { useState, UseEffect, useEffect } from "react";
 import { GoalCard } from "./GoalCard";
-import { getAllGoals, getGoalById, deleteGoal } from "../../../../modules/GoalManager";
+import { getAllGoalsByProject, getGoalById, deleteGoal } from "../../../../modules/GoalManager";
 import { useHistory } from "react-router";
 
 export const GoalList = ({ projectId }) => {
@@ -10,7 +10,7 @@ export const GoalList = ({ projectId }) => {
     let history = useHistory();
 
     const getGoalsByProjectId = (projectId) => {
-        return getAllGoals(projectId)
+        return getAllGoalsByProject(projectId)
             .then(goalsFromAPI => {
                 setGoals(goalsFromAPI)
             });
@@ -18,7 +18,7 @@ export const GoalList = ({ projectId }) => {
 
     const handleDeleteGoal = id => {
         deleteGoal(id)
-            .then(() => getAllGoals(projectId).then(setGoals));
+            .then(() => getAllGoalsByProject(projectId).then(setGoals));
     };
 
     useEffect(() => {

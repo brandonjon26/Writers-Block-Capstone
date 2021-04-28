@@ -9,13 +9,13 @@ export const SubNav = () => {
     return (
         <ul className="subnav">
             <li className="subnav__item">
-                <Link className="subnav__link" to="/projects/:projectId(\d+)/goals"> Goals </Link>
+                <a className="subnav__link" href="#goals"> Goals </a>
             </li>
             <li className="subnav__item">
-                <Link className="subnav__link" to="/projects/:projectId(\d+)/notes"> Notes </Link>
+                <a className="subnav__link" href="#notes"> Notes </a>
             </li>
             <li className="subnav__item">
-                <Link className="subnav__link" to="/projects/:projectId(\d+)/characters"> Characters </Link>
+                <a className="subnav__link" href="#characters"> Characters </a>
             </li>
         </ul>
     );

@@ -42,6 +42,36 @@ export const ProjectDetail = () => {
                 <button type="button" disabled={isLoading} onClick={handleDelete}>
                     Nuke
                 </button>
+                <section id="goals">
+                    <h4>Goals</h4>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                </section>
+                <section id="notes">
+                    <h4>Notes</h4>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                </section>
+                <section id="characters">
+                    <h4>Characters</h4>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                    <p>.</p>
+                </section>
             </section>
         </>
     )

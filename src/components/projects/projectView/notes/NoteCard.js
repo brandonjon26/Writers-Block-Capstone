@@ -1,6 +1,5 @@
 import React from "react";
 // import "/Note.css";
-import { Link } from "react-router-dom";
 
 export const NoteCard = ({ note, handleDeleteNote }) => {
     return (

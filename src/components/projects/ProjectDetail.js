@@ -5,6 +5,7 @@ import { useParams, useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { SubNav } from "./projectView/SubNav";
 import { GoalList } from "./projectView/goals/GoalList";
+import { NoteList } from "./projectView/notes/NoteList";
 // import { firstLetterCase } from "../../modules/helper";
 
 export const ProjectDetail = () => {
@@ -51,13 +52,9 @@ export const ProjectDetail = () => {
                 </section>
                 <section id="notes">
                     <h4>Notes</h4>
-                    <p>.</p>
-                    <p>.</p>
-                    <p>.</p>
-                    <p>.</p>
-                    <p>.</p>
-                    <p>.</p>
-                    <p>.</p>
+                    
+                        { project.id && <NoteList projectId={project.id} />}
+
                 </section>
                 <section id="characters">
                     <h4>Characters</h4>

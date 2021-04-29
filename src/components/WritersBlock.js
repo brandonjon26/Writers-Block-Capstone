@@ -31,28 +31,3 @@ export const WritersBlock = () => {
 
 
 
-
-
-
-
-    // <Route
-    //   render={() => {
-    //     if (sessionStorage.getItem("writersBlock_user")) {
-    //       return (
-    //         <>
-    //           <NavBar />
-    //           <ApplicationViews />
-    //         </>
-    //       )
-    //     } else {
-    //       return <Redirect to="/login" />;
-    //     }
-    //   }}
-    // />
-
-    // <Route path="/Login">
-    //   <Login />
-    // </Route>
-    // <Route path="/Register">
-    //   <Register />
-    // </Route>

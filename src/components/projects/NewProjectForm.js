@@ -1,4 +1,4 @@
-import React, { useState, UseEffect, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import { addProject, getAllGenres } from "../../modules/ProjectManager";
 // import "./ProjectForm.css";
@@ -12,10 +12,10 @@ export const ProjectForm = () => {
         summary: ""
     });
 
-    const [isLoading, setIsLoading] = useState(false);
+    // const [isLoading, setIsLoading] = useState(false);
     const [genre, setGenre] = useState([]);
 
-    let history = useHistory();
+    const history = useHistory();
 
     const handleControlledInputChange = (event) => {
         const newProject = { ...project }

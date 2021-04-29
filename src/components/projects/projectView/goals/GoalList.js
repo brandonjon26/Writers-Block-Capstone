@@ -1,16 +1,16 @@
-import React, { useState, UseEffect, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { GoalCard } from "./GoalCard";
-import { getAllGoalsByProject, getGoalById, deleteGoal } from "../../../../modules/GoalManager";
+import { getAllGoalsByProject, deleteGoal } from "../../../../modules/GoalsManager";
 import { useHistory } from "react-router";
 
 export const GoalList = ({ projectId }) => {
 
     const [goals, setGoals] = useState([]);
 
-    let history = useHistory();
+    const history = useHistory();
 
-    const getGoalsByProjectId = (projectId) => {
-        return getAllGoalsByProject(projectId)
+    const getGoalsByProjectId = (id) => {
+        return getAllGoalsByProject(id)
             .then(goalsFromAPI => {
                 setGoals(goalsFromAPI)
             });
@@ -23,7 +23,7 @@ export const GoalList = ({ projectId }) => {
 
     useEffect(() => {
         getGoalsByProjectId(projectId);
-    }, []);
+    }, [projectId]);
 
     return (
         <>
@@ -32,14 +32,14 @@ export const GoalList = ({ projectId }) => {
                     <button type="button"
                         className="btn"
                         onClick={() => { history.push("/goals/create") }}>
-                            Add A Goal
-                        </button>
+                        Add A Goal
+                    </button>
+                    {goals.map(goal => <GoalCard
+                        key={goal.id}
+                        goal={goal}
+                        handleDeleteGoal={handleDeleteGoal}
+                    />)}
                 </section>
-                {goals.map(goal => <GoalCard 
-                    key={goal.id}
-                    goal={goal}
-                    handleDeleteGoal={handleDeleteGoal}
-                />)}
             </div>
         </>
     )

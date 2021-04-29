@@ -7,7 +7,7 @@ export const ProjectList = () => {
     
     const [projects, setProjects] = useState([]);
 
-    let history = useHistory();
+    const history = useHistory();
 
     const getProjects = () => {
         return getAllProjects()

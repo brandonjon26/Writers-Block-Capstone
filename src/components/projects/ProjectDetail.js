@@ -4,14 +4,15 @@ import { getProjectById, deleteProject } from "../../modules/ProjectManager";
 import { useParams, useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { SubNav } from "./projectView/SubNav";
+import { GoalList } from "./projectView/goals/GoalList";
 // import { firstLetterCase } from "../../modules/helper";
 
 export const ProjectDetail = () => {
-    const [project, setProject] = useState({ "name": "title" });
+    const [project, setProject] = useState({});
     const [isLoading, setIsLoading] = useState(true);
 
     const { projectId } = useParams();
-    let history = useHistory();
+    const history = useHistory();
 
     useEffect(() => {
 
@@ -44,13 +45,9 @@ export const ProjectDetail = () => {
                 </button>
                 <section id="goals">
                     <h4>Goals</h4>
-                    <p>.</p>
-                    <p>.</p>
-                    <p>.</p>
-                    <p>.</p>
-                    <p>.</p>
-                    <p>.</p>
-                    <p>.</p>
+
+                        { project.id && <GoalList projectId={project.id} />}
+
                 </section>
                 <section id="notes">
                     <h4>Notes</h4>

@@ -1,10 +1,9 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
-import { Link, useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 // import "./NavBar.css";
 
 export const SubNav = () => {
-    const history = useHistory()
+    // const history = useHistory()
 
     return (
         <ul className="subnav">

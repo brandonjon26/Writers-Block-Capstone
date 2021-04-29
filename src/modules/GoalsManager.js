@@ -1,7 +1,7 @@
 const remoteURL = "http://localhost:8088"
 
 export const getAllGoalsByProject = (projectId) => {
-    return fetch(`${remoteURL}/goals/${projectId}`)
+    return fetch(`${remoteURL}/goals?projectId=${projectId}`)
         .then(result => result.json())
 }
 

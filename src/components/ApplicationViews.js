@@ -6,6 +6,7 @@ import { ProjectList } from "./projects/ProjectsList";
 import { ProjectForm } from "./projects/NewProjectForm";
 import { ProjectDetail } from "./projects/ProjectDetail";
 import { GoalForm } from "./projects/projectView/goals/GoalForm";
+import { NoteForm } from "./projects/projectView/notes/NoteForm";
 
 
 export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
@@ -33,6 +34,10 @@ export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
 
             <Route exact path="/goals/create/:projectId(\d+)">
                 <GoalForm />
+            </Route>
+
+            <Route exact path="/notes/create/:projectId(\d+)">
+                <NoteForm />
             </Route>
         </>
     )

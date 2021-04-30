@@ -36,7 +36,6 @@ export const GoalForm = () => {
             startDate: goal.startDate,
             targetCompletionDate: goal.targetCompletionDate,
             projectId: projectId,
-            // projectId: 1
         }
 
         addGoal(newGoalObj)

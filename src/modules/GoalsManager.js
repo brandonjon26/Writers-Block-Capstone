@@ -17,7 +17,7 @@ export const deleteGoal = (id) => {
 }
 
 export const addGoal = (projectId) => {
-    return fetch(`${remoteURL}/goals?projectID=${projectId}`, {
+    return fetch(`${remoteURL}/goals?projectId=${projectId}`, {
         method: "POST",
         headers: {
             "content-Type": "application/json"

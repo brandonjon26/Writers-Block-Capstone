@@ -31,7 +31,7 @@ export const NoteList = ({ projectId }) => {
                 <section className="section-content">
                     <button type="button"
                         className="btn"
-                        onClick={() => { history.push("/notes/create") }}>
+                        onClick={() => { history.push(`/notes/create/${projectId}`) }}>
                         Add A Note
                     </button>
                     {notes.map(note => <NoteCard 

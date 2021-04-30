@@ -15,3 +15,13 @@ export const deleteNote = (id) => {
         method: "DELETE"
     }).then(result => result.json())
 }
+
+export const addNote = (projectId) => {
+    return fetch(`${remoteURL}/notes?projectId=${projectId}`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(projectId)
+    }).then(response => response.json())
+}

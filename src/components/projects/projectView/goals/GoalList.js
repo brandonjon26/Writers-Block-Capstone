@@ -31,7 +31,7 @@ export const GoalList = ({ projectId }) => {
                 <section className="section-content">
                     <button type="button"
                         className="btn"
-                        onClick={() => { history.push("/goals/create") }}>
+                        onClick={() => { history.push(`/goals/create/${projectId}`) }}>
                         Add A Goal
                     </button>
                     {goals.map(goal => <GoalCard

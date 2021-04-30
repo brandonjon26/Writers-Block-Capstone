@@ -15,3 +15,13 @@ export const deleteGoal = (id) => {
         method: "DELETE"
     }).then(result => result.json())
 }
+
+export const addGoal = (projectId) => {
+    return fetch(`${remoteURL}/goals?projectID=${projectId}`, {
+        method: "POST",
+        headers: {
+            "content-Type": "application/json"
+        },
+        body: JSON.stringify(projectId)
+    }).then(response => response.json())
+}

@@ -15,3 +15,18 @@ export const deleteCharacter = (id) => {
         method: "DELETE"
     }).then(result => result.json())
 }
+
+export const addCharacter = (projectId) => {
+    return fetch(`${remoteURL}/characters?projectId=${projectId}`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(projectId)
+    }).then(response => response.json())
+}
+
+export const getAllTypes = () => {
+    return fetch(`${remoteURL}/types`)
+        .then(result => result.json())
+}

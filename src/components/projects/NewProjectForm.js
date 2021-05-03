@@ -6,10 +6,13 @@ import { Link } from "react-router-dom";
 
 export const ProjectForm = () => {
 
+    const currentUser = JSON.parse(sessionStorage.getItem("writersBlock_user")).id;
+
     const [project, setProject] = useState({
         title: "",
         genreId: 0,
-        summary: ""
+        summary: "",
+        userId: parseInt(currentUser)
     });
 
     // const [isLoading, setIsLoading] = useState(false);

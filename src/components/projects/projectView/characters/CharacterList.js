@@ -31,7 +31,7 @@ export const CharacterList = ({ projectId }) => {
                 <section className="section-content">
                     <button type="button"
                         className="btn"
-                        onClick={() => { history.push("/characters/create") }}>
+                        onClick={() => { history.push(`/characters/create/${projectId}`) }}>
                         Create A Character
                     </button>
                     {characters.map(character => <CharacterCard 

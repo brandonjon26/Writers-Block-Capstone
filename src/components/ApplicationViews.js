@@ -7,6 +7,7 @@ import { ProjectForm } from "./projects/NewProjectForm";
 import { ProjectDetail } from "./projects/ProjectDetail";
 import { GoalForm } from "./projects/projectView/goals/GoalForm";
 import { NoteForm } from "./projects/projectView/notes/NoteForm";
+import { CharacterForm } from "./projects/projectView/characters/CharacterForm";
 
 
 export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
@@ -38,6 +39,10 @@ export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
 
             <Route exact path="/notes/create/:projectId(\d+)">
                 <NoteForm />
+            </Route>
+
+            <Route exact path="/characters/create/:projectId(\d+)">
+                <CharacterForm />
             </Route>
         </>
     )

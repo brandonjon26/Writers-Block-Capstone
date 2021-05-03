@@ -31,7 +31,7 @@ export const NoteForm = () => {
 
         const newNoteObj = {
             text: note.text,
-            projectId: projectId
+            projectId: parseInt(projectId)
         }
 
         addNote(newNoteObj)

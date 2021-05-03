@@ -30,3 +30,13 @@ export const getAllTypes = () => {
     return fetch(`${remoteURL}/types`)
         .then(result => result.json())
 }
+
+export const updateCharacter = (editedCharacter) => {
+    return fetch(`${remoteURL}/characters/${editedCharacter.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(editedCharacter)
+    }).then(data => data.json());
+}

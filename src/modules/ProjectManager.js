@@ -30,3 +30,13 @@ export const getAllGenres = () => {
     return fetch(`${remoteURL}/genres`)
         .then(result => result.json())
 }
+
+export const updateProject = (editedProject) => {
+    return fetch(`${remoteURL}/projects/${editedProject.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(editedProject)
+    }).then(data => data.json());
+}

@@ -28,7 +28,7 @@ export const ProjectDetail = () => {
     const handleDelete = () => {
         setIsLoading(true);
         deleteProject(projectId).then(() =>
-            history.push("/projects")
+            history.push("/")
         );
     };
 

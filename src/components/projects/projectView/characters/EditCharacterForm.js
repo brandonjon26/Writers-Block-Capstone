@@ -4,13 +4,11 @@ import { updateCharacter, getCharacterById, getAllTypes } from "../../../../modu
 import { useHistory, useParams, Link } from "react-router-dom";
 
 export const EditCharacterForm = () => {
-    const [character, setCharacter] = useState({ name: "", details: ""});
+    const [character, setCharacter] = useState({ name: "", typeId: 0, details: "", projectId: 0, id: 0});
     const [type, setType] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
     const { characterId } = useParams();
-    const { typeId } = useParams();
-    const { projectId } = useParams();
     const history = useHistory();
 
     const handleFieldChange = (event) => {
@@ -25,23 +23,23 @@ export const EditCharacterForm = () => {
 
         const editedCharacter = {
             id: characterId,
-            id2: typeId,
             name: character.name,
             typeId: character.typeId,
-            details: character.details
+            details: character.details,
+            projectId: character.projectId
         };
 
         updateCharacter(editedCharacter)
-            .then(() => history.push(`/projects/${projectId}`))
+            .then(() => history.push(`/projects/${character.projectId}`))
     };
 
     useEffect(() => {
-        getCharacterById()
+        getCharacterById(characterId)
             .then(character => {
                 setCharacter(character);
                 setIsLoading(false);
             });
-    }, []);
+    }, [characterId]);
 
     useEffect(() => {
         getAllTypes()
@@ -56,6 +54,7 @@ export const EditCharacterForm = () => {
             <form>
                 <fieldset>
                     <div className="formgrid">
+                        <label htmlFor="name">Character Name</label>
                         <input 
                             type="text"
                             required
@@ -64,8 +63,8 @@ export const EditCharacterForm = () => {
                             id="name"
                             value={character.name}
                         />
-                        <label htmlFor="name">Character Name</label>
 
+                        <label htmlFor="typeId">Select-A-Type</label>
                         <select 
                             type="text"
                             required
@@ -81,21 +80,20 @@ export const EditCharacterForm = () => {
                                 </option>
                             )}
                         </select>
-                        <label htmlFor="typeId">Select-A-Type</label>
 
+                        <label htmlFor="details">Character Details</label>
                         <input 
                             type="text"
                             required
                             className="form-control"
                             onChange={handleFieldChange}
                             id="details"
-                            value={character.name}
+                            value={character.details}
                         />
-                        <label htmlFor="details">Character Details</label>
 
                     </div>
                     <div className="alignRight">
-                        <Link to={`/projects/${projectId}`}>
+                        <Link to={`/projects/${character.projectId}`}>
                             <button>Back</button>
                         </Link>
                     </div>

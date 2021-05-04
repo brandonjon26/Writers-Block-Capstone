@@ -1,6 +1,6 @@
 import React from "react";
 // import "./GoalCard.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export const GoalCard = ({ goal, handleDeleteGoal }) => {
     return (
@@ -11,9 +11,6 @@ export const GoalCard = ({ goal, handleDeleteGoal }) => {
                         <p>Goal: {goal.description}</p>
                         <p>Start Date: {goal.startDate}</p>
                         <p>To be completed by: {goal.targetCompletionDate}</p>
-                        <Link to={`/projects/${goal.id}/edit`}>
-                            <button type="button">Edit</button>
-                        </Link>
                         <button type="button" onClick={() => handleDeleteGoal(goal.id)}>Delete</button>
                     </div>
                 </div>
@@ -21,3 +18,36 @@ export const GoalCard = ({ goal, handleDeleteGoal }) => {
         </div>
     );
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        // <Link to={`/projects/${goal.id}/edit`}>
+                        //     <button type="button">Edit</button>
+                        // </Link>

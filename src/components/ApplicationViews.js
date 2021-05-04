@@ -46,7 +46,7 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
                 <CharacterForm />
             </Route>
 
-            <Route exact path="/characters/edit/:projectId(\d+)">
+            <Route exact path="/characters/edit/:characterId(\d+)">
                 <EditCharacterForm />
             </Route>
         </>

@@ -42,6 +42,9 @@ export const ProjectDetail = () => {
                 <Link to={`/`}>
                     <button>Back</button>
                 </Link>
+                <Link to={`edit/${project.id}`}>
+                    <button>Edit</button>
+                </Link>
                 <button type="button" disabled={isLoading} onClick={handleDelete}>
                     Nuke
                 </button>

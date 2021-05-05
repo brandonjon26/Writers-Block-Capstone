@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ProjectCard } from "./ProjectCard";
-import { getAllProjects, deleteProject } from "../../modules/ProjectManager";
+import { getProjectsByUserId, deleteProject } from "../../modules/ProjectManager";
 import { useHistory } from "react-router";
 
 export const ProjectList = () => {
@@ -9,8 +9,10 @@ export const ProjectList = () => {
 
     const history = useHistory();
 
+    const currentUserId = JSON.parse(sessionStorage.getItem("writersBlock_user")).id;
+
     const getProjects = () => {
-        return getAllProjects()
+        return getProjectsByUserId(currentUserId)
             .then(projectsFromApi => {
                 setProjects(projectsFromApi)
             });
@@ -18,7 +20,7 @@ export const ProjectList = () => {
 
     const handleDeleteProject = id => {
         deleteProject(id)
-            .then(() => getAllProjects().then(setProjects));
+            .then(() => getProjects());
     };
 
     useEffect(() => {

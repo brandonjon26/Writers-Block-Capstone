@@ -24,13 +24,13 @@ export const EditProjectForm = () => {
         const editedProject = {
             id: projectId,
             title: project.title,
-            genreId: project.genre,
+            genreId: project.genreId,
             summary: project.summary,
             userId: project.userId
         };
 
         updateProject(editedProject)
-            .then(() => history.push(`/projects/${projectId}`))
+            .then(() => history.push(`/projects/${project.id}`))
     };
 
     useEffect(() => {
@@ -67,7 +67,8 @@ export const EditProjectForm = () => {
                         <label htmlFor="genreId">Select-A-Genre</label>
                         <select
                             type="text"
-                            requiredclassName="form-control"
+                            required 
+                            className="form-control"
                             onChange={handleFieldChange}
                             id="genreId"
                             value={project.genreId}

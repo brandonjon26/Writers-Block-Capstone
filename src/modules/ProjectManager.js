@@ -10,6 +10,11 @@ export const getAllProjects = () => {
         .then(result => result.json())
 }
 
+export const getProjectsByUserId = (id) => {
+    return fetch(`${remoteURL}/projects?userId=${id}&_expand=genre`)
+        .then(result => result.json())
+}
+
 export const deleteProject = (id) => {
     return fetch(`${remoteURL}/projects/${id}`, {
         method: "DELETE"

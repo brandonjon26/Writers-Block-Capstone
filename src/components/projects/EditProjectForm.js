@@ -30,7 +30,7 @@ export const EditProjectForm = () => {
         };
 
         updateProject(editedProject)
-            .then(() => history.push(`/projects/${projectId}`))
+            .then(() => history.push(`/projects/${project.id}`))
     };
 
     useEffect(() => {

@@ -38,6 +38,7 @@ export const ProjectDetail = () => {
                 <SubNav />
                 <h3 className="project__name">{project.title}</h3>
                 <div className="project__genre">Genre: {project.genre?.name}</div>
+                {/* question mark is a type of conditional (operational nullifier) that asks is there is a genre. The answer changes to yes once we update state with the projects */}
                 <div className="project__summary">Summary: {project.summary}</div>
                 <Link to={`/`}>
                     <button>Back</button>
@@ -52,6 +53,7 @@ export const ProjectDetail = () => {
                     <h4>Goals</h4>
 
                         { project.id && <GoalList projectId={project.id} />}
+                        {/* this is a type of conditional that asks if ther is a project id. Answer changes to yes when the state is updated with projects */}
 
                 </section>
                 <section id="notes">

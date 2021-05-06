@@ -1,0 +1,292 @@
+{
+  "users": [
+    {
+      "email": "brandonjon26@gmail.com",
+      "name": "Brandon_Hill",
+      "id": 1
+    },
+    {
+      "email": "bb@bb.com",
+      "name": "Bernardo_Bernardo",
+      "id": 2
+    },
+    {
+      "email": "bh@test.com",
+      "name": "test_test",
+      "id": 3
+    },
+    {
+      "email": "b-nice@bryan.com",
+      "name": "Bryan Nilsen",
+      "id": 4
+    },
+    {
+      "email": "bl@long.com",
+      "name": "Brenda Long",
+      "id": 5
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "The Nightingales",
+      "genreId": "1",
+      "summary": "The Nightingale family possesses exceptional combat and magic skills. The only ones to master both, they serve as a buffer between the two groups of fighters",
+      "userId": 1
+    },
+    {
+      "title": "test",
+      "genreId": 2,
+      "summary": "I'm just testing to see if this will post",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "title": "Bryan's Project",
+      "genreId": "4",
+      "summary": "Bryan's love for dystopian novels",
+      "userId": 4
+    },
+    {
+      "id": 4,
+      "title": "Star Wars Episode 10",
+      "genreId": 2,
+      "summary": "Jedi's return in new sabers",
+      "userId": 5
+    }
+  ],
+  "bursts": [],
+  "genres": [
+    {
+      "name": "Fantasy",
+      "id": 1
+    },
+    {
+      "name": "Science Fiction",
+      "id": 2
+    },
+    {
+      "name": "Dystopian",
+      "id": 3
+    },
+    {
+      "name": "Action & Adventure",
+      "id": 4
+    },
+    {
+      "name": "Mystery",
+      "id": 5
+    },
+    {
+      "name": "Horror",
+      "id": 6
+    },
+    {
+      "name": "Thriller & Suspense",
+      "id": 7
+    },
+    {
+      "name": "Historical Fiction",
+      "id": 8
+    },
+    {
+      "name": "Romance",
+      "id": 9
+    },
+    {
+      "name": "Women's Fiction",
+      "id": 10
+    },
+    {
+      "name": "LGBTQ+",
+      "id": 11
+    },
+    {
+      "name": "Contemporary Fiction",
+      "id": 12
+    },
+    {
+      "name": "Literary Fiction",
+      "id": 13
+    },
+    {
+      "name": "Magical Realism",
+      "id": 14
+    },
+    {
+      "name": "Graphic Novel",
+      "id": 15
+    },
+    {
+      "name": "Short Story",
+      "id": 16
+    },
+    {
+      "name": "Young Adult",
+      "id": 17
+    },
+    {
+      "name": "New Adult",
+      "id": 18
+    },
+    {
+      "name": "Children's",
+      "id": 19
+    },
+    {
+      "name": "Space",
+      "id": 20
+    },
+    {
+      "name": "Western",
+      "id": 21
+    }
+  ],
+  "goals": [
+    {
+      "id": 1,
+      "projectId": 1,
+      "description": "Finish developing Nightingale family",
+      "startDate": "10/15/2020",
+      "targetCompletionDate": "11/15/2020"
+    },
+    {
+      "projectId": 1,
+      "description": "Write chapters 1-4",
+      "startDate": "1/2/2021",
+      "targetCompletionDate": "1/16/2021",
+      "id": 2
+    },
+    {
+      "description": "test",
+      "startDate": "2021-04-30",
+      "targetCompletionDate": "2021-05-01",
+      "projectId": 1,
+      "id": 3
+    },
+    {
+      "description": "test2",
+      "startDate": "2021-05-06",
+      "targetCompletionDate": "2021-05-08",
+      "projectId": 1,
+      "id": 4
+    },
+    {
+      "description": "Name this story",
+      "startDate": "2021-05-05",
+      "targetCompletionDate": "2021-05-12",
+      "projectId": 3,
+      "id": 5
+    },
+    {
+      "description": "Chapters 1-5",
+      "startDate": "2021-05-05",
+      "targetCompletionDate": "2021-05-19",
+      "projectId": 4,
+      "id": 6
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "projectId": 1,
+      "text": "Maybe give Roan a love interest?"
+    },
+    {
+      "text": "Testing...",
+      "projectId": 1,
+      "id": 2
+    },
+    {
+      "text": "Bryan is gonna be the hero of this story",
+      "projectId": 3,
+      "id": 3
+    },
+    {
+      "text": "An orange and purple light saber ",
+      "projectId": 4,
+      "id": 4
+    }
+  ],
+  "characters": [
+    {
+      "id": 1,
+      "name": "Roan Nightingale",
+      "typeId": "2",
+      "details": "A 22 year old master of the dark arts. A prodigy in the making, he must save the world after everyone he loves is ripped away.",
+      "projectId": 1
+    },
+    {
+      "name": "test",
+      "typeId": 1,
+      "details": "testing...",
+      "projectId": 1,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Bryan Nilsen",
+      "typeId": 1,
+      "details": "Witty anti-hero",
+      "projectId": 3
+    },
+    {
+      "id": 4,
+      "name": "Bell Sharp",
+      "typeId": "2",
+      "details": "She is a young prodigy",
+      "projectId": 4
+    }
+  ],
+  "types": [
+    {
+      "id": 1,
+      "name": "Protagonist"
+    },
+    {
+      "name": "Antagonist",
+      "id": 2
+    },
+    {
+      "name": "Deuteragonist",
+      "id": 3
+    },
+    {
+      "name": "Tertiary Characters",
+      "id": 4
+    },
+    {
+      "name": "Love Interest",
+      "id": 5
+    },
+    {
+      "name": "Confidant",
+      "id": 6
+    },
+    {
+      "name": "Foil Character",
+      "id": 7
+    },
+    {
+      "name": "Dynamic/Changing Character",
+      "id": 8
+    },
+    {
+      "name": "Static/Unchanging Character",
+      "id": 9
+    },
+    {
+      "name": "Stock Character",
+      "id": 10
+    },
+    {
+      "name": "Symbolic Character",
+      "id": 11
+    },
+    {
+      "name": "Round Character",
+      "id": 12
+    }
+  ]
+}

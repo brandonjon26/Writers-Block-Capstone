@@ -12,10 +12,16 @@ export const EditCharacterForm = () => {
     const history = useHistory();
 
     const handleFieldChange = (event) => {
-        const stateToChange = { ...character };
-        stateToChange[event.target.id] = event.target.value;
-        setCharacter(stateToChange);
-    };
+        const stateToChange = { ...character }
+        let selectedVal = event.target.value
+        if (event.target.id.includes("Id")) {
+            selectedVal = parseInt(selectedVal)
+        }
+
+        stateToChange[event.target.id] = selectedVal
+
+        setCharacter(stateToChange)
+    }
 
     const updateExistingCharacter = (event) => {
         event.preventDefault()

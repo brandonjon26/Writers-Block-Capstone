@@ -67,7 +67,7 @@ export const CharacterForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="form-group2">
                     <label htmlFor="type">What roll will this character play? </label>
                     <select value={character.typeId} name="typeId" id="typeId" onChange={handleControlledInputChange} className="form-control">
                         <option value="0">Select a Type</option>
@@ -80,7 +80,7 @@ export const CharacterForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="form-group3">
                     <label htmlFor="details">Character Details: </label>
                     <input type="text" id="details" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Character details" value={character.details} />
                 </div>

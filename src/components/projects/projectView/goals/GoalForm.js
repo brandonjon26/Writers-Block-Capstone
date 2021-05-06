@@ -52,13 +52,13 @@ export const GoalForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="form-group2">
                     <label htmlFor="startDate">Start Date? </label>
                     <input type="date" id="startDate" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Goal startDate" value={goal.startDate} />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="form-group3">
                     <label htmlFor="targetCompletionDate">End Date? </label>
                     <input type="date" id="targetCompletionDate" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Goal targetCompletionDate" value={goal.targetCompletionDate} />
                 </div>

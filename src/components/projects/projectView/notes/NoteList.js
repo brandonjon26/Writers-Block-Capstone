@@ -27,7 +27,7 @@ export const NoteList = ({ projectId }) => {
 
     return (
         <>
-            <div id="notes" className="container-cards">
+            <div id="notes" className="container">
                 <section className="section-content">
                     <button type="button"
                         className="btn"

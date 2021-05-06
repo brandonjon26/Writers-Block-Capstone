@@ -18,9 +18,7 @@ export const WritersBlock = () => {
     return (
         <>
             <NavBar clearUser={clearUser} isAuthenticated={isAuthenticated} />
-            <div className="applicationView">
-                <ApplicationViews setAuthUser={setAuthUser} isAuthenticated={isAuthenticated} />
-            </div>
+            <ApplicationViews setAuthUser={setAuthUser} isAuthenticated={isAuthenticated} />
         </>
     )
 }

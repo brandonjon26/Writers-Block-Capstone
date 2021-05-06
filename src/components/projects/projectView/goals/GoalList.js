@@ -27,7 +27,7 @@ export const GoalList = ({ projectId }) => {
 
     return (
         <>
-            <div id="goals" className="container-cards">
+            <div id="goals" className="cards">
                 <section className="section-content">
                     <button type="button"
                         className="btn"

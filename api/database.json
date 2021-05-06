@@ -30,7 +30,7 @@
     {
       "id": 1,
       "title": "The Nightingales",
-      "genreId": "1",
+      "genreId": 1,
       "summary": "The Nightingale family possesses exceptional combat and magic skills. The only ones to master both, they serve as a buffer between the two groups of fighters",
       "userId": 1
     },
@@ -44,7 +44,7 @@
     {
       "id": 3,
       "title": "Bryan's Project",
-      "genreId": "4",
+      "genreId": 4,
       "summary": "Bryan's love for dystopian novels",
       "userId": 4
     },
@@ -54,6 +54,20 @@
       "genreId": 2,
       "summary": "Jedi's return in new sabers",
       "userId": 5
+    },
+    {
+      "title": "Just for fun",
+      "genreId": 16,
+      "summary": "test",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "title": "Another one",
+      "genreId": 2,
+      "summary": "test",
+      "userId": 1,
+      "id": 6
     }
   ],
   "bursts": [],
@@ -213,7 +227,7 @@
     {
       "id": 1,
       "name": "Roan Nightingale",
-      "typeId": "2",
+      "typeId": 1,
       "details": "A 22 year old master of the dark arts. A prodigy in the making, he must save the world after everyone he loves is ripped away.",
       "projectId": 1
     },
@@ -234,7 +248,7 @@
     {
       "id": 4,
       "name": "Bell Sharp",
-      "typeId": "2",
+      "typeId": 2,
       "details": "She is a young prodigy",
       "projectId": 4
     }

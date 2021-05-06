@@ -5,7 +5,6 @@
 }
 
 .project {
-    flex-basis: 20%;
     margin: 1em;
     padding: 1em;
     border: 5px solid #eeb648;
@@ -16,6 +15,10 @@
     border-radius: 5px;
     margin-bottom: 2em;
     flex: 0 1 25%;
+}
+
+.card {
+    position: relative;
 }
 
 .card-content {

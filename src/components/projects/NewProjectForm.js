@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import { addProject, getAllGenres } from "../../modules/ProjectManager";
-// import "./ProjectForm.css";
+import "./ProjectForm.css";
 import { Link } from "react-router-dom";
 
 export const ProjectForm = () => {
@@ -62,7 +62,7 @@ export const ProjectForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="form-group2">
                     <label htmlFor="genre">What genre is this story? </label>
                     <select value={project.genreId} name="genreId" id="genreId" onChange={handleControlledInputChange} className="form-control" >
                         <option value="0">Select a Genre </option>
@@ -75,13 +75,13 @@ export const ProjectForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="form-group3">
                     <label htmlFor="summary">Summary: </label>
                     <input type="text" id="summary" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Project summary" value={project.summary} />
                 </div>
             </fieldset>
             <Link to={`/`}>
-                <button>Back</button>
+                <button type="button">Back</button>
             </Link>
             <button className="btn"
                 onClick={handleClickSaveProject}>

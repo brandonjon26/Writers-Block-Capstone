@@ -13,7 +13,12 @@ export const EditProjectForm = () => {
 
     const handleFieldChange = (event) => {
         const stateToChange = { ...project };
-        stateToChange[event.target.id] = event.target.value;
+        let selectedVal = event.target.value
+        if (event.target.id.includes("Id")) {
+            selectedVal = parseInt(selectedVal)
+        }
+        stateToChange[event.target.id] = selectedVal
+
         setProject(stateToChange);
     };
 

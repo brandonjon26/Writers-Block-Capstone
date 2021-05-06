@@ -5,7 +5,7 @@ import { useHistory } from "react-router";
 import "./ProjectList.css";
 
 export const ProjectList = () => {
-    
+
     const [projects, setProjects] = useState([]);
 
     const history = useHistory();
@@ -31,19 +31,17 @@ export const ProjectList = () => {
     return (
         <>
             <div className="container-cards">
-                <div className="landingOverlay" />
-                <section className="section-content">
-                    <button type="button"
-                        className="btn"
-                        onClick={() => { history.push("/projects/create") }}>
-                        Create New Project
-                    </button>
-                </section>
-                {projects.map(project => <ProjectCard 
+                {/* <div className="landingOverlay" /> */}
+                <button type="button"
+                    className="button"
+                    onClick={() => { history.push("/projects/create") }}>
+                    Create New Project
+                </button>
+                {projects.map(project => <ProjectCard
                     key={project.id}
                     project={project}
                     handleDeleteProject={handleDeleteProject}
-                    />)}
+                />)}
             </div>
         </>
     );

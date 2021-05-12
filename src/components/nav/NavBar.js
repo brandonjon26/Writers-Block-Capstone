@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { Link, useHistory } from "react-router-dom";
 import "./NavBar.css";
 import Logo from "./WritersBlock-logo.png";
+import Icon from "./WritersBlock-Icon.png";
 
 export const NavBar = ({ clearUser, isAuthenticated }) => {
     const history = useHistory()
@@ -14,29 +15,17 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
 
     return (
         <>
-            <div className="navContainer">
-                {isAuthenticated
-                    ?
-                    <ul className="Navbar">
-                        <div className="topNav">
-                            <img src={Logo}></img>
-                            <div className="logout-image">
-                                <li className="navbar__item test">
-                                    <Link className="navbar__link logout_link" to="/login" onClick={handleLogout}> Logout </Link>
-                                </li>
-                            </div>
-                        </div>
-                        <div className="bottomNav">
-                            <li className="navbar__item">
-                                <Link className="navbar__link" to="/"> My Projects </Link>
-                            </li>
-                            <li className="navbar__item">
-                                <Link className="navbar__link" to="/bursts"> Bursts </Link>
-                            </li>
-                        </div>
-                    </ul>
-                    : null}
-            </div>
+            {isAuthenticated ?
+                <div className="navContainer">
+                    <img className="logo" src={Logo} />
+                        <Link className="navbar__link" to="/"> My Projects </Link>
+                        <Link className="navbar__link" to="/bursts"> Bursts </Link>
+                    <div className="logout-image">
+                        <img className="userIcon" src={Icon} />
+                        <Link className="logout_link" to="/login" onClick={handleLogout}> Logout </Link>
+                    </div>
+                </div>
+            : null}
         </>
     )
 }

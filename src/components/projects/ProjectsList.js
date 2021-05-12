@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ProjectCard } from "./ProjectCard";
 import { getProjectsByUserId, deleteProject } from "../../modules/ProjectManager";
 import { useHistory } from "react-router";
-import "./ProjectList.css";
+// import "./ProjectList.css";
 
 export const ProjectList = () => {
 
@@ -31,7 +31,6 @@ export const ProjectList = () => {
     return (
         <>
             <div className="container-cards">
-                {/* <div className="landingOverlay" /> */}
                 <button type="button"
                     className="button"
                     onClick={() => { history.push("/projects/create") }}>

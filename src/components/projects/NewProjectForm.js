@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import { addProject, getAllGenres } from "../../modules/ProjectManager";
-import "./ProjectForm.css";
+// import "./ProjectForm.css";
 import { Link } from "react-router-dom";
 
 export const ProjectForm = () => {

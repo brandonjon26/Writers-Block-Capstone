@@ -1,6 +1,6 @@
 import React from "react";
 // import { useHistory } from "react-router-dom";
-// import "./NavBar.css";
+import "./SubNav.css";
 
 export const SubNav = () => {
     // const history = useHistory()

@@ -1,0 +1,10 @@
+.subnav {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.25em;
+    margin-bottom: 2em;
+}
+
+.subnav__link {
+    color: black;
+}

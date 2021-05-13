@@ -1,0 +1,32 @@
+.projectOverview {
+    display: flex;
+    flex-direction: column;
+    /* align-self: flex-start;
+    width: auto;
+    justify-content: center;
+    background-color: #B8F4BF;
+    padding: 1em; */
+}
+
+.project__name {
+    margin-left: 380px;
+    padding-bottom: .5em;
+}
+
+.project__genre {
+    padding-bottom: .5em;
+    margin-left: 420px;
+    font-weight: bold;
+}
+
+.project__summary {
+    padding-bottom: 1em
+    ;
+}
+
+.detailButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 1em;
+}

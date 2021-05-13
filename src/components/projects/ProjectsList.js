@@ -34,7 +34,7 @@ export const ProjectList = () => {
                 <div className="contentHeader">
                     <h1>My Projects!</h1>
                     <button type="button"
-                        className="button"
+                        className="createButton"
                         onClick={() => { history.push("/projects/create") }}>
                         Create New Project
                     </button>

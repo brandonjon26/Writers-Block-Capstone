@@ -30,12 +30,13 @@
 
 .navbar__link {
     text-decoration: none;
-    color: darkorange;
+    color: gray;
     font-size: 1.5em;
+    font-weight: bold;
 }
 
 .navbar__link:hover {
-    color: rgb(250, 185, 64);
+    color: darkorange;
 }
 
 .logout_link {

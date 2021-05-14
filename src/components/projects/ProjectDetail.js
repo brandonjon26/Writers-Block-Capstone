@@ -35,9 +35,9 @@ export const ProjectDetail = () => {
     return (
         <>
             <section className="project">
-                <SubNav />
                 <div className="projectOverview">
                     <h2 className="project__name">{project.title}</h2>
+                    <SubNav />
                     <div className="project__genre">Genre: {project.genre?.name}</div>
                     {/* question mark is a type of conditional (operational nullifier) that asks is there is a genre. The answer changes to yes once we update state with the projects */}
                     <div className="project__summary">Summary: {project.summary}</div>

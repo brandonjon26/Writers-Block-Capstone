@@ -9,3 +9,8 @@ export const addBurst = (newBurst) => {
         body: JSON.stringify(newBurst)
     }).then(result => result.json())
 }
+
+export const getUserBursts = (id) => {
+    return fetch(`${remoteURL}/bursts/${id}`)
+        .then(res => res.json())
+}

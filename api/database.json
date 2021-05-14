@@ -70,7 +70,14 @@
       "id": 6
     }
   ],
-  "bursts": [],
+  "bursts": [
+    {
+      "title": "test",
+      "burst": "just a test to see if this works",
+      "userId": 1,
+      "id": 1
+    }
+  ],
   "genres": [
     {
       "name": "Fantasy",

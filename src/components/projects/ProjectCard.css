@@ -21,8 +21,12 @@
     padding: .25em;
 }
 
+button {
+    padding: 5px 10px;
+    border: 1px solid black;
+}
+
 .buttonOne {
-    margin-left: 590px;
     background-color: #B8F4BF;
 }
 

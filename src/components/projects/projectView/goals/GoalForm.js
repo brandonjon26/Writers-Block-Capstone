@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useHistory } from "react-router";
 import { addGoal } from "../../../../modules/GoalsManager";
-// import "./GoalForm.css";
+import "./GoalForm.css";
 import { Link } from "react-router-dom";
 
 export const GoalForm = () => {

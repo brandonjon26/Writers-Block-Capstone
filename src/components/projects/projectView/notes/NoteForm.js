@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useHistory } from "react-router";
 import { addNote } from "../../../../modules/NoteManager";
-// import "./NoteForm.css";
+import "./NoteForm.css";
 import { Link } from "react-router-dom";
 
 export const NoteForm = () => {

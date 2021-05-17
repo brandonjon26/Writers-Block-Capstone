@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { updateProject, getProjectById, getAllGenres } from "../../modules/ProjectManager";
-// import "./ProjectForm.css";
+import "./EditProjectForm.css";
 import { useHistory, useParams, Link } from "react-router-dom";
 
 export const EditProjectForm = () => {
@@ -58,12 +58,12 @@ export const EditProjectForm = () => {
         <>
             <form>
                 <fieldset>
-                    <div className="formgrid">
+                    <div className="editFormgrid">
                         <label htmlFor="title">Project Title</label>
                         <input
                             type="text"
                             required
-                            className="form-control"
+                            className="editForm-control"
                             onChange={handleFieldChange}
                             id="title"
                             value={project.title}
@@ -73,7 +73,7 @@ export const EditProjectForm = () => {
                         <select
                             type="text"
                             required 
-                            className="form-control"
+                            className="editForm-control"
                             onChange={handleFieldChange}
                             id="genreId"
                             value={project.genreId}
@@ -90,23 +90,21 @@ export const EditProjectForm = () => {
                         <input 
                             type="text"
                             required
-                            className="form-control"
+                            className="editForm-control"
                             onChange={handleFieldChange}
                             id="summary"
                             value={project.summary}
                         />
 
                     </div>
-                    <div className="alignRight">
+                    <div className="editAlignRight">
                         <Link to={`/projects/${projectId}`}>
                             <button>Back</button>
                         </Link>
-                    </div>
-                    <div className="alignRight">
                         <button 
                             type="button" disabled={isLoading}
                             onClick={updateExistingProject}
-                            className="btn"
+                            className="editSaveButton"
                         >Save</button>
                     </div>
                 </fieldset>

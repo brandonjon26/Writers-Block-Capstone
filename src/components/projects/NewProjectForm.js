@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import { addProject, getAllGenres } from "../../modules/ProjectManager";
-// import "./ProjectForm.css";
+import "./ProjectForm.css";
 import { Link } from "react-router-dom";
 
 export const ProjectForm = () => {
@@ -77,7 +77,7 @@ export const ProjectForm = () => {
             <fieldset>
                 <div className="form-group3">
                     <label htmlFor="summary">Summary: </label>
-                    <input type="text" id="summary" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Project summary" value={project.summary} />
+                    <textarea type="text" id="summary" name="summaryText" rows="4" cols="25" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Project summary" value={project.summary} />
                 </div>
             </fieldset>
             <Link to={`/`}>

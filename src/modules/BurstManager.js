@@ -10,7 +10,14 @@ export const addBurst = (newBurst) => {
     }).then(result => result.json())
 }
 
-export const getUserBursts = (id) => {
-    return fetch(`${remoteURL}/bursts/${id}`)
+export const getUserBursts = (userId) => {
+    return fetch(`${remoteURL}/bursts?userId=${userId}`)
+    // get all of the bursts where the userId equals the userId coming into the function above
         .then(res => res.json())
+}
+
+export const deleteBurst = (id) => {
+    return fetch(`${remoteURL}/bursts/${id}`, {
+        method: "DELETE"
+    }).then(result => result.json())
 }

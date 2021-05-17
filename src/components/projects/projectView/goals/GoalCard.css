@@ -1,0 +1,37 @@
+.goals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    border: 2px solid black;
+    background-color: white;
+    width: 80%;
+    padding: 1em;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+.goalDescription {
+    padding: .25em;
+}
+
+.goalStart {
+    padding: .25em;
+}
+
+.goalComplete {
+    padding-top: .25em;
+    padding-left: .25em;
+    padding-right: .25em;
+    padding-bottom: .5em;
+}
+
+.goalDelete {
+    background-color: #B8F4BF;
+}
+
+.goalDelete:hover {
+    background-color: #31E022;
+}

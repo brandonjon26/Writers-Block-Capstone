@@ -29,8 +29,8 @@
 }
 
 .project__summary {
-    padding-bottom: 1em
-    ;
+    padding-bottom: 1em;
+    font-weight: bold;
 }
 
 .detailButtons {

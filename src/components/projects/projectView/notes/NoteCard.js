@@ -1,5 +1,5 @@
 import React from "react";
-// import "/Note.css";
+import "./NoteCard.css";
 
 export const NoteCard = ({ note, handleDeleteNote }) => {
     return (
@@ -7,8 +7,8 @@ export const NoteCard = ({ note, handleDeleteNote }) => {
             <div className="card-content">
                 <div className="notes">
                     <div className="note">
-                        <p>Note: {note.text}</p>
-                        <button type="button" onClick={() => handleDeleteNote(note.id)}>Delete</button>
+                        <p className="noteText">Note: {note.text}</p>
+                        <button type="button" className="noteDelete" onClick={() => handleDeleteNote(note.id)}>Delete</button>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,29 @@
+.notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    border: 2px solid black;
+    background-color: white;
+    width: 80%;
+    padding: 1em;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+.noteText {
+    padding-top: .25em;
+    padding-left: .25em;
+    padding-right: .25em;
+    padding-bottom: .5em;
+}
+
+.noteDelete {
+    background-color: #B8F4BF;
+}
+
+.noteDelete:hover {
+    background-color: #31E022;
+}

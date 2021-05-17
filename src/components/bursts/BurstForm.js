@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router";
 import { addBurst } from "../../modules/BurstManager";
-import { Link } from "react-router-dom";
 // import "./BurstForm.css";
 
-export const BurstForm = () => {
+export const BurstForm = ({ getBursts }) => {
 
     const currentUser = JSON.parse(sessionStorage.getItem("writersBlock_user")).id;
 
-    const [burst, setBurst] = useState({
+    const initialBurst = {
         title: "",
         burst: "",
         userId: parseInt(currentUser)
-    });
+    }
 
-    const history = useHistory([]);
+    const [burst, setBurst] = useState(initialBurst);
 
     const handleControlledInputChange = (event) => {
         const newBurst = { ...burst }
+        // the three dots = spread operator
+        // making a shallow copy of the burst object from state
         let selectedVal = event.target.value
         if (event.target.id.includes("Id")) {
             selectedVal = parseInt(selectedVal)
@@ -33,7 +33,9 @@ export const BurstForm = () => {
 
         addBurst(burst)
         // get user bursts (this will reload the list with the new burst)
-            // .then(() => history.push(`/bursts`))
+            .then(getBursts)
+            .then(() => setBurst(initialBurst))
+            // anonymous function that updates the state of burst by passing in the values of initialBurst
     }
 
     return (
@@ -50,7 +52,7 @@ export const BurstForm = () => {
             <fieldset>
                 <div className="form-group2">
                     <label htmlFor="burstWrite">Time To Burst! </label>
-                    <textarea type="text" id="burst" name="burstWrite" rows="50" cols="100" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholde="Burst write" value={burst.burst}  />
+                    <textarea type="text" id="burst" name="burstWrite" rows="15" cols="100" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholde="Burst write" value={burst.burst}  />
                 </div>
             </fieldset>
             <button className="btn"

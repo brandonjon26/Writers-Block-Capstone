@@ -35,13 +35,6 @@
       "userId": 1
     },
     {
-      "title": "test",
-      "genreId": 2,
-      "summary": "I'm just testing to see if this will post",
-      "userId": 1,
-      "id": 2
-    },
-    {
       "id": 3,
       "title": "Bryan's Project",
       "genreId": 4,
@@ -54,30 +47,9 @@
       "genreId": 2,
       "summary": "Jedi's return in new sabers",
       "userId": 5
-    },
-    {
-      "title": "Just for fun",
-      "genreId": 16,
-      "summary": "test",
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "title": "Another one",
-      "genreId": 2,
-      "summary": "test",
-      "userId": 1,
-      "id": 6
     }
   ],
-  "bursts": [
-    {
-      "title": "test",
-      "burst": "Bryan's test",
-      "userId": 4,
-      "id": 2
-    }
-  ],
+  "bursts": [],
   "genres": [
     {
       "name": "Fantasy",
@@ -180,20 +152,6 @@
       "id": 2
     },
     {
-      "description": "test",
-      "startDate": "2021-04-30",
-      "targetCompletionDate": "2021-05-01",
-      "projectId": 1,
-      "id": 3
-    },
-    {
-      "description": "test2",
-      "startDate": "2021-05-06",
-      "targetCompletionDate": "2021-05-08",
-      "projectId": 1,
-      "id": 4
-    },
-    {
       "description": "Name this story",
       "startDate": "2021-05-05",
       "targetCompletionDate": "2021-05-12",
@@ -215,11 +173,6 @@
       "text": "Maybe give Roan a love interest?"
     },
     {
-      "text": "Testing...",
-      "projectId": 1,
-      "id": 2
-    },
-    {
       "text": "Bryan is gonna be the hero of this story",
       "projectId": 3,
       "id": 3
@@ -237,13 +190,6 @@
       "typeId": 1,
       "details": "A 22 year old master of the dark arts. A prodigy in the making, he must save the world after everyone he loves is ripped away.",
       "projectId": 1
-    },
-    {
-      "name": "test",
-      "typeId": 1,
-      "details": "testing...",
-      "projectId": 1,
-      "id": 2
     },
     {
       "id": 3,

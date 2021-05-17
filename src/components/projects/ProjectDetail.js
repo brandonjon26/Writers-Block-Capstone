@@ -34,10 +34,12 @@ export const ProjectDetail = () => {
 
     return (
         <>
-            <section className="project">
+            <section className="projectDetail">
                 <div className="projectOverview">
-                    <h2 className="project__name">{project.title}</h2>
-                    <SubNav />
+                    <div className="projectSubnav">
+                        <h2 className="project__name">{project.title}</h2>
+                        <SubNav />
+                    </div>
                     <div className="project__genre">Genre: {project.genre?.name}</div>
                     {/* question mark is a type of conditional (operational nullifier) that asks is there is a genre. The answer changes to yes once we update state with the projects */}
                     <div className="project__summary">Summary: {project.summary}</div>
@@ -54,20 +56,17 @@ export const ProjectDetail = () => {
                     </button>
                 </div>
                 <section id="goals">
-                    <h4>Goals</h4>
 
                     {project.id && <GoalList projectId={project.id} />}
                     {/* this is a type of conditional that asks if ther is a project id. Answer changes to yes when the state is updated with projects */}
 
                 </section>
                 <section id="notes">
-                    <h4>Notes</h4>
 
                     {project.id && <NoteList projectId={project.id} />}
 
                 </section>
                 <section id="characters">
-                    <h4>Characters</h4>
 
                     {project.id && <CharacterList projectId={project.id} />}
 

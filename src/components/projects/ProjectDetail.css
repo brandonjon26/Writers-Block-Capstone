@@ -1,11 +1,20 @@
 .projectOverview {
     display: flex;
     flex-direction: column;
+    /* background-color: #B8F4BF; */
     /* align-self: flex-start;
     width: auto;
     justify-content: center;
     background-color: #B8F4BF;
     padding: 1em; */
+}
+
+.projectDetail {
+    background-color: #B8F4BF;
+}
+
+.projectSubnav {
+    background-color: grey;
 }
 
 .project__name {
@@ -27,6 +36,7 @@
 .detailButtons {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     padding-bottom: 1em;
+    padding-right: 1em;
 }

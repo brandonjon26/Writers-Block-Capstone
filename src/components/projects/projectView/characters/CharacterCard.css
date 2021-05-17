@@ -1,0 +1,45 @@
+.characters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    border: 2px solid black;
+    background-color: white;
+    width: 80%;
+    padding: 1em;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+.characterName {
+    padding: .25em;
+}
+
+.characterType {
+    padding: .25em;
+}
+
+.characterDetails {
+    padding-top: .25em;
+    padding-left: .25em;
+    padding-right: .25em;
+    padding-bottom: .5em;
+}
+
+.characterEdit {
+    background-color: #B8F4BF;
+}
+
+.characterEdit:hover {
+    background-color: #31E022;
+}
+
+.characterDelete {
+    background-color: #B8F4BF;
+}
+
+.characterDelete:hover {
+    background-color: #31E022;
+}

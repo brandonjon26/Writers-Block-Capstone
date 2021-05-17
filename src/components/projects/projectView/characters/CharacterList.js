@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { CharacterCard } from "./CharacterCard";
 import { getAllCharactersByProject, deleteCharacter } from "../../../../modules/CharacterManager";
 import { useHistory } from "react-router";
+import "./CharacterList.css";
 
 export const CharacterList = ({ projectId }) => {
 
@@ -29,16 +30,19 @@ export const CharacterList = ({ projectId }) => {
         <>
             <div id="characters" className="containers-cards">
                 <section className="section-content">
-                    <button type="button"
-                        className="btn"
-                        onClick={() => { history.push(`/characters/create/${projectId}`) }}>
-                        Create A Character
-                    </button>
-                    {characters.map(character => <CharacterCard 
+                    <div className="characterHeader">
+                        <h4>Characters</h4>
+                        <button type="button"
+                            className="btn"
+                            onClick={() => { history.push(`/characters/create/${projectId}`) }}>
+                            Create A Character
+                        </button>
+                    </div>
+                    {characters.map(character => <CharacterCard
                         key={character.id}
                         character={character}
                         handleDeleteCharacter={handleDeleteCharacter}
-                        />)}
+                    />)}
                 </section>
             </div>
         </>

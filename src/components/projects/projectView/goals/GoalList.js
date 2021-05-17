@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { GoalCard } from "./GoalCard";
 import { getAllGoalsByProject, deleteGoal } from "../../../../modules/GoalsManager";
 import { useHistory } from "react-router";
+import "./GoalList.css";
 
 export const GoalList = ({ projectId }) => {
 
@@ -29,11 +30,14 @@ export const GoalList = ({ projectId }) => {
         <>
             <div id="goals" className="cards">
                 <section className="section-content">
-                    <button type="button"
-                        className="btn"
-                        onClick={() => { history.push(`/goals/create/${projectId}`) }}>
-                        Add A Goal
-                    </button>
+                    <div className="goalHeader">
+                        <h4>Goals</h4>
+                        <button type="button"
+                            className="btn"
+                            onClick={() => { history.push(`/goals/create/${projectId}`) }}>
+                            Add A Goal
+                        </button>
+                    </div>
                     {goals.map(goal => <GoalCard
                         key={goal.id}
                         goal={goal}

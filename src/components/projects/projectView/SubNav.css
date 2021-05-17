@@ -9,10 +9,11 @@
     /* background-color: #31E022; */
     /* background-color: #39E822; */
     /* background-color: black; */
-    padding-bottom: .5em;
+    /* padding-bottom: .5em; */
 }
 
 .subnav__link {
     color: black;
+    text-decoration: none;
     /* color: darkorange; */
 }

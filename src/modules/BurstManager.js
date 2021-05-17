@@ -21,3 +21,8 @@ export const deleteBurst = (id) => {
         method: "DELETE"
     }).then(result => result.json())
 }
+
+export const getBurstById = (id) => {
+    return fetch(`${remoteURL}/bursts/${id}`)
+        .then(res => res.json())
+}

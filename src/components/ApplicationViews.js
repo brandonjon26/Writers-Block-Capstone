@@ -11,6 +11,7 @@ import { CharacterForm } from "./projects/projectView/characters/CharacterForm";
 import { EditCharacterForm } from "./projects/projectView/characters/EditCharacterForm";
 import { EditProjectForm } from "./projects/EditProjectForm";
 import { BurstHome } from "./bursts/BurstHome";
+import { BurstDetail } from "./bursts/BurstDetail";
 
 
 export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
@@ -58,6 +59,10 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
 
             <Route exact path="/bursts">
                 <BurstHome />
+            </Route>
+
+            <Route exact path="/bursts/:burstId(\d+)">
+                <BurstDetail />
             </Route>
         </>
     )

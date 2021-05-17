@@ -73,12 +73,6 @@
   "bursts": [
     {
       "title": "test",
-      "burst": "just a test to see if this works",
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "title": "test",
       "burst": "Bryan's test",
       "userId": 4,
       "id": 2

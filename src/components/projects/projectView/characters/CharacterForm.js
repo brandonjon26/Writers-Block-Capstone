@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router";
 import { addCharacter, getAllTypes } from "../../../../modules/CharacterManager";
-// import "./CharacterForm.css";
+import "./CharacterForm.css";
 import { Link } from "react-router-dom";
 
 export const CharacterForm = () => {

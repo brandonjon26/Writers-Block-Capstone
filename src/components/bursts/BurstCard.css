@@ -1,0 +1,35 @@
+.bursts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    border: 2px solid black;
+    background-color: white;
+    width: 80%;
+    padding: 1em;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+.burstTitle {
+    padding: .5em;
+    font-size: 1.5em;
+}
+
+.burstDetailButton {
+    background-color: #B8F4BF;;
+}
+
+.burstDetailButton:hover {
+    background-color: #31E022;;
+}
+
+.burstDeleteButton {
+    background-color: #B8F4BF;;
+}
+
+.burstDeleteButton:hover {
+    background-color: #31E022;;
+}

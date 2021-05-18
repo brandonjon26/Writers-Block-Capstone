@@ -47,6 +47,13 @@
       "genreId": 2,
       "summary": "Jedi's return in new sabers",
       "userId": 5
+    },
+    {
+      "title": "Fermi Paradox: Book 1",
+      "genreId": 2,
+      "summary": "Young adults fight to survive on a decimated Earth with only each other to rely on. With minimal resources, training, and hope, they must pull out all the stops to survive the impending invasion from space.",
+      "userId": 1,
+      "id": 5
     }
   ],
   "bursts": [],
